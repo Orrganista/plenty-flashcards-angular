@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.min.css";
+
+@font-face {
+  font-family: Kanit;
+  src: url(assets/fonts/Kanit/Kanit-Regular.ttf) format("opentype");
+}
+
+* {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Kanit", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

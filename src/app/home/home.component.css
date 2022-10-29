@@ -1,0 +1,41 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #fcede7;
+}
+
+.home__button {
+  position: absolute;
+  width: 20vw;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #242b31;
+  border: solid 2px#242b31;
+  color: #db6637;
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  left: 40%;
+  bottom: 10%;
+}
+
+.home__button:hover {
+  background-color: #fcede7;
+  color: #db6637;
+}
+
+.home--blur {
+  /* background: rgba(255, 255, 255, 0.2); */
+  /* backdrop-filter: blur(8px); */
+  /* height: 40vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #1b1c1e
+  ); */
+}

@@ -1,0 +1,24 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  min-height: 120px;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.nav:hover {
+  background-color: #242b31;
+}
+
+.nav__logo {
+  color: #db6637;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  padding: 32px;
+  text-align: center;
+  cursor: default;
+}
