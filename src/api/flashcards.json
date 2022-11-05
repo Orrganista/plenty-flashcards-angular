@@ -1,0 +1,318 @@
+[
+  {
+    "boxId": 1,
+    "name": "English",
+    "decks": [
+      {
+        "deckId": 1,
+        "name": "Home",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          },
+          {
+            "flashcardId": 2,
+            "question": "Forestburg",
+            "answer": "Maine"
+          },
+          {
+            "flashcardId": 3,
+            "question": "Mulino",
+            "answer": "West Virginia"
+          },
+          {
+            "flashcardId": 4,
+            "question": "Clarksburg",
+            "answer": "Tennessee"
+          },
+          {
+            "flashcardId": 5,
+            "question": "Bethpage",
+            "answer": "Guam"
+          },
+          {
+            "flashcardId": 6,
+            "question": "Taft",
+            "answer": "Wisconsin"
+          },
+          {
+            "flashcardId": 7,
+            "question": "Leming",
+            "answer": "Delaware"
+          },
+          {
+            "flashcardId": 8,
+            "question": "Jessie",
+            "answer": "Kansas"
+          },
+          {
+            "flashcardId": 9,
+            "question": "Chicopee",
+            "answer": "Virginia"
+          }
+        ]
+      },
+      {
+        "deckId": 2,
+        "name": "Work",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          },
+          {
+            "flashcardId": 2,
+            "question": "Forestburg",
+            "answer": "Maine"
+          },
+          {
+            "flashcardId": 3,
+            "question": "Mulino",
+            "answer": "West Virginia"
+          }
+        ]
+      },
+      {
+        "deckId": 3,
+        "name": "School",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "boxId": 2,
+    "name": "Russian",
+    "decks": [
+      {
+        "deckId": 1,
+        "name": "Countries",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          },
+          {
+            "flashcardId": 2,
+            "question": "Forestburg",
+            "answer": "Maine"
+          },
+          {
+            "flashcardId": 3,
+            "question": "Mulino",
+            "answer": "West Virginia"
+          },
+          {
+            "flashcardId": 4,
+            "question": "Clarksburg",
+            "answer": "Tennessee"
+          },
+          {
+            "flashcardId": 5,
+            "question": "Bethpage",
+            "answer": "Guam"
+          },
+          {
+            "flashcardId": 6,
+            "question": "Taft",
+            "answer": "Wisconsin"
+          },
+          {
+            "flashcardId": 7,
+            "question": "Leming",
+            "answer": "Delaware"
+          },
+          {
+            "flashcardId": 8,
+            "question": "Jessie",
+            "answer": "Kansas"
+          },
+          {
+            "flashcardId": 9,
+            "question": "Chicopee",
+            "answer": "Virginia"
+          }
+        ]
+      },
+      {
+        "deckId": 2,
+        "name": "At the airport",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          },
+          {
+            "flashcardId": 2,
+            "question": "Forestburg",
+            "answer": "Maine"
+          },
+          {
+            "flashcardId": 3,
+            "question": "Mulino",
+            "answer": "West Virginia"
+          },
+          {
+            "flashcardId": 4,
+            "question": "Clarksburg",
+            "answer": "Tennessee"
+          },
+          {
+            "flashcardId": 5,
+            "question": "Bethpage",
+            "answer": "Guam"
+          },
+          {
+            "flashcardId": 6,
+            "question": "Taft",
+            "answer": "Wisconsin"
+          },
+          {
+            "flashcardId": 7,
+            "question": "Leming",
+            "answer": "Delaware"
+          },
+          {
+            "flashcardId": 8,
+            "question": "Jessie",
+            "answer": "Kansas"
+          },
+          {
+            "flashcardId": 9,
+            "question": "Chicopee",
+            "answer": "Virginia"
+          }
+        ]
+      },
+      {
+        "deckId": 3,
+        "name": "Food",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          },
+          {
+            "flashcardId": 2,
+            "question": "Forestburg",
+            "answer": "Maine"
+          },
+          {
+            "flashcardId": 3,
+            "question": "Mulino",
+            "answer": "West Virginia"
+          },
+          {
+            "flashcardId": 4,
+            "question": "Clarksburg",
+            "answer": "Tennessee"
+          },
+          {
+            "flashcardId": 5,
+            "question": "Bethpage",
+            "answer": "Guam"
+          },
+          {
+            "flashcardId": 6,
+            "question": "Taft",
+            "answer": "Wisconsin"
+          },
+          {
+            "flashcardId": 7,
+            "question": "Leming",
+            "answer": "Delaware"
+          },
+          {
+            "flashcardId": 8,
+            "question": "Jessie",
+            "answer": "Kansas"
+          },
+          {
+            "flashcardId": 9,
+            "question": "Chicopee",
+            "answer": "Virginia"
+          }
+        ]
+      },
+      { "deckId": 4, "name": "Clothes" }
+    ]
+  },
+  {
+    "boxId": 3,
+    "name": "Turkish",
+    "decks": [
+      { "deckId": 1, "name": "Home" },
+      { "deckId": 2, "name": "Work" },
+      { "deckId": 3, "name": "School" },
+      { "deckId": 4, "name": "In the restaurant" },
+      { "deckId": 5, "name": "Countries" },
+      { "deckId": 6, "name": "At the airport" }
+    ]
+  },
+  {
+    "boxId": 4,
+    "name": "Math",
+    "decks": [
+      { "deckId": 1, "name": "In the restaurant" },
+      { "deckId": 2, "name": "Countries" },
+      { "deckId": 3, "name": "At the airport" },
+      { "deckId": 4, "name": "Food" },
+      { "deckId": 5, "name": "Clothes" }
+    ]
+  },
+  {
+    "boxId": 5,
+    "name": "Angular",
+    "decks": [
+      { "deckId": 1, "name": "Home" },
+      { "deckId": 2, "name": "Work" },
+      { "deckId": 3, "name": "School" },
+      { "deckId": 4, "name": "In the restaurant" },
+      { "deckId": 5, "name": "Countries" },
+      { "deckId": 6, "name": "At the airport" },
+      { "deckId": 7, "name": "Food" },
+      { "deckId": 8, "name": "Clothes" }
+    ]
+  }
+]

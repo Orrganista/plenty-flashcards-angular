@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -11,12 +12,9 @@ import { FlashcardListComponent } from './flashcards/flashcard-list.component';
     AppComponent,
     NavComponent,
     HomeComponent,
-    FlashcardListComponent
+    FlashcardListComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, HttpClientModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
