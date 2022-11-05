@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { FlashcardListComponent } from './flashcards/flashcard-list.component';
+import { BoxComponent } from './flashcards/box.component';
+import { FlashcardComponent } from './flashcards/flashcard.component';
+import { DeckComponent } from './flashcards/deck.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,9 @@ import { FlashcardListComponent } from './flashcards/flashcard-list.component';
     NavComponent,
     HomeComponent,
     FlashcardListComponent,
+    BoxComponent,
+    FlashcardComponent,
+    DeckComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   bootstrap: [AppComponent],

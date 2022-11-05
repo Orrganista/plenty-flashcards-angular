@@ -1,7 +1,7 @@
-import { IFlashcard } from './flashcard';
+import { Flashcard } from './flashcard';
 
-export interface IDeck {
+export interface Deck {
   deckId: number;
   name: string;
-  flashcards: Array<IFlashcard>;
+  flashcards: Array<Flashcard>;
 }

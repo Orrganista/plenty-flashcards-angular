@@ -1,7 +1,7 @@
-import { IDeck } from './deck';
+import { Deck } from './deck';
 
-export interface IBox {
+export interface Box {
   boxId: number;
   name: string;
-  decks: Array<IDeck>;
+  decks: Array<Deck>;
 }

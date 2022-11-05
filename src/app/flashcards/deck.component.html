@@ -1,0 +1,8 @@
+<div class="deck__row" (click)="toggleDeck()">
+  <h2>{{ deck.name }}</h2>
+</div>
+<div *ngIf="showFlashcards" class="deck__flashcards">
+  <div *ngFor="let flashcard of deck.flashcards" class="flashcard">
+    <fml-flashcard [flashcard]="flashcard"></fml-flashcard>
+  </div>
+</div>
