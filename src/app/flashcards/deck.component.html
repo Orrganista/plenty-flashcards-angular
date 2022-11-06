@@ -2,7 +2,14 @@
   <h2>{{ deck.name }}</h2>
 </div>
 <div *ngIf="showFlashcards" class="deck__flashcards">
-  <div *ngFor="let flashcard of deck.flashcards" class="flashcard">
-    <fml-flashcard [flashcard]="flashcard"></fml-flashcard>
+  <div class="flashcard-list__flashcard">
+    <div class="flashcard__row">
+      <h3>+ Add Fishcard</h3>
+    </div>
   </div>
+  <fml-flashcard
+    *ngFor="let flashcard of deck.flashcards"
+    [flashcard]="flashcard"
+    [ngClass]="'flashcard-list__flashcard'"
+  ></fml-flashcard>
 </div>

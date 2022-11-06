@@ -275,7 +275,62 @@
           }
         ]
       },
-      { "deckId": 4, "name": "Clothes" }
+      {
+        "deckId": 4,
+        "name": "Clothes",
+        "flashcards": [
+          {
+            "flashcardId": 0,
+            "question": "Nescatunga",
+            "answer": "American Samoa"
+          },
+          {
+            "flashcardId": 1,
+            "question": "Kohatk",
+            "answer": "Vermont"
+          },
+          {
+            "flashcardId": 2,
+            "question": "Forestburg",
+            "answer": "Maine"
+          },
+          {
+            "flashcardId": 3,
+            "question": "Mulino",
+            "answer": "West Virginia"
+          },
+          {
+            "flashcardId": 4,
+            "question": "Clarksburg",
+            "answer": "Tennessee"
+          },
+          {
+            "flashcardId": 5,
+            "question": "Bethpage",
+            "answer": "Guam"
+          },
+          {
+            "flashcardId": 6,
+            "question": "Taft",
+            "answer": "Wisconsin"
+          },
+          {
+            "flashcardId": 7,
+            "question": "Leming",
+            "answer": "Delaware"
+          },
+          {
+            "flashcardId": 8,
+            "question": "Jessie",
+            "answer": "Kansas"
+          },
+          {
+            "flashcardId": 9,
+            "question": "Chicopee",
+            "answer": "Virginia"
+          }
+        ]
+      }
     ]
   },
   {

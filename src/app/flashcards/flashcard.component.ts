@@ -4,7 +4,7 @@ import { Flashcard } from './flashcard';
 @Component({
   selector: 'fml-flashcard',
   templateUrl: './flashcard.component.html',
-  styleUrls: ['./flashcard.component.css'],
+  styleUrls: ['./flashcard.component.css', './flashcard-list.component.css'],
 })
 export class FlashcardComponent implements OnInit {
   @Input() flashcard: Flashcard = {

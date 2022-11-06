@@ -4,7 +4,7 @@ import { Box } from './box';
 @Component({
   selector: 'fml-box',
   templateUrl: './box.component.html',
-  styleUrls: ['./box.component.css'],
+  styleUrls: ['./box.component.css', './flashcard-list.component.css'],
 })
 export class BoxComponent implements OnInit {
   @Input() box: Box = { boxId: 0, name: 'Ancient Times', decks: [] };

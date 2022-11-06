@@ -2,10 +2,16 @@
   <h1>{{ box.name }}</h1>
 </div>
 <div *ngIf="showDecks" class="box__decks">
-  <div *ngFor="let deck of box.decks" class="deck">
-    <fml-deck [deck]="deck"></fml-deck>
+  <fml-deck
+    *ngFor="let deck of box.decks"
+    [deck]="deck"
+    [ngClass]="'flashcard-list__deck'"
+  ></fml-deck>
+  <div class="flashcard-list__deck">
+    <div class="deck__row">
+      <h2>+ Add Deck</h2>
+    </div>
   </div>
-  <!-- <div *ngIf="box.decks.length % 3 == 2 || box.decks.length % 3 == 2" class="deck"></div> -->
-  <div class="deck"></div>
-  <div class="deck"></div>
+  <div class="flashcard-list__deck"></div>
+  <div class="flashcard-list__deck"></div>
 </div>

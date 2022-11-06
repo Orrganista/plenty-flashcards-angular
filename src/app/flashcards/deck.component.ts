@@ -4,7 +4,7 @@ import { Deck } from './deck';
 @Component({
   selector: 'fml-deck',
   templateUrl: './deck.component.html',
-  styleUrls: ['./deck.component.css'],
+  styleUrls: ['./deck.component.css', './flashcard-list.component.css'],
 })
 export class DeckComponent implements OnInit {
   @Input() deck: Deck = { deckId: 0, name: 'Rome', flashcards: [] };
