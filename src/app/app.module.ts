@@ -9,6 +9,7 @@ import { FlashcardListComponent } from './flashcards/flashcard-list.component';
 import { BoxComponent } from './flashcards/box.component';
 import { FlashcardComponent } from './flashcards/flashcard.component';
 import { DeckComponent } from './flashcards/deck.component';
+import { FlashcardAddComponent } from './flashcards/flashcard-add.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DeckComponent } from './flashcards/deck.component';
     BoxComponent,
     FlashcardComponent,
     DeckComponent,
+    FlashcardAddComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   bootstrap: [AppComponent],

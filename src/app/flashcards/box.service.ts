@@ -12,7 +12,7 @@ export class BoxService {
 
   getBoxes(): Observable<Box[]> {
     return this.http.get<Box[]>(this.flashcardsUrl).pipe(
-      tap((data) => console.log('All', JSON.stringify(data))),
+      tap((data) => console.log('Fetched boxes', JSON.stringify(data))),
       catchError(this.handleError)
     );
   }
