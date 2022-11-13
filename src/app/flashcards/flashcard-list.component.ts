@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Box } from './box';
-import { BoxService } from './box.service';
+import { FlashcardService } from './flashcard.service';
 
 @Component({
   selector: 'fml-flashcard-list',
@@ -13,10 +13,12 @@ export class FlashcardListComponent implements OnInit, OnDestroy {
   errorMessage: string = '';
   sub!: Subscription;
 
-  constructor(private boxService: BoxService) {}
+  add: boolean = false;
+
+  constructor(private flashcardService: FlashcardService) {}
 
   ngOnInit(): void {
-    this.sub = this.boxService.getBoxes().subscribe({
+    this.sub = this.flashcardService.getBoxes().subscribe({
       next: (boxes) => (this.boxes = boxes),
       error: (err) => (this.errorMessage = err),
     });
@@ -24,5 +26,10 @@ export class FlashcardListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+
+  dodaj(): void {
+    this.boxes.push({ boxId: 5, name: 'Nowy', decks: [] });
+    this.add = true;
   }
 }

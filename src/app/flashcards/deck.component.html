@@ -8,8 +8,8 @@
     </div>
   </div>
   <fml-flashcard
-    *ngFor="let flashcard of deck.flashcards"
-    [flashcard]="flashcard"
+    *ngFor="let f of deck.flashcards"
+    [flashcard]="f"
     [ngClass]="'flashcard-list__flashcard'"
   ></fml-flashcard>
 </div>

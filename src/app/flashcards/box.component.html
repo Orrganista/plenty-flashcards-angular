@@ -3,12 +3,12 @@
 </div>
 <div *ngIf="showDecks" class="box__decks">
   <fml-deck
-    *ngFor="let deck of box.decks"
-    [deck]="deck"
+    *ngFor="let d of box.decks"
+    [deck]="d"
     [ngClass]="'flashcard-list__deck'"
   ></fml-deck>
   <div class="flashcard-list__deck">
-    <div class="deck__row">
+    <div class="deck__row" (click)="dodaj()">
       <h2>+ Add Deck</h2>
     </div>
   </div>

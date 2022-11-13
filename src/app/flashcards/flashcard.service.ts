@@ -6,7 +6,7 @@ import { Box } from './box';
 @Injectable({
   providedIn: 'root',
 })
-export class BoxService {
+export class FlashcardService {
   private flashcardsUrl = 'api/flashcards.json';
   constructor(private http: HttpClient) {}
 

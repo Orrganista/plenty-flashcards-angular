@@ -17,4 +17,8 @@ export class BoxComponent implements OnInit {
   toggleBox(): void {
     this.showDecks = !this.showDecks;
   }
+
+  dodaj(): void {
+    this.box.decks.push({ deckId: 5, name: 'Nowy Deck', flashcards: [] });
+  }
 }
