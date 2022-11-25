@@ -1,0 +1,68 @@
+<div class="add">
+  <div class="add__window">
+    <div class="add__close">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="add__picture"></div>
+    <div class="add__title">
+      <h2 class="color-bright">New {{ objType }}</h2>
+      <button
+        *ngIf="flashcarda"
+        class="color-dark"
+        type="button"
+        (click)="addFlashcard()"
+        [disabled]="!flashcards.valid"
+      >
+        Add another
+      </button>
+    </div>
+
+    <form class="" [formGroup]="addForm" (ngSubmit)="save()" novalidate>
+      <div class="form__group">
+        <input
+          *ngIf="!flashcarda"
+          class="add__input"
+          id="nameId"
+          type="text"
+          formControlName="name"
+          placeholder="Name"
+          autocomplete="off"
+        />
+      </div>
+
+      <div *ngIf="flashcarda" class="form__flashcards">
+        <div formArrayName="flashcards">
+          <div
+            class="form__group"
+            *ngFor="let flashcard of flashcards.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <h4 class="color-bright" attr.for="{{ 'questionId' + i }}">
+              #{{ i + 1 }}
+            </h4>
+            <input
+              class="add__input"
+              id="{{ 'questionId' + i }}"
+              type="text"
+              formControlName="question"
+              placeholder="Question"
+              autocomplete="off"
+            />
+            <input
+              class="add__input"
+              id="{{ 'answerId' + i }}"
+              type="text"
+              formControlName="answer"
+              placeholder="Answer"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button class="add__button" type="submit" [disabled]="!addForm.valid">
+        Save
+      </button>
+    </form>
+  </div>
+</div>

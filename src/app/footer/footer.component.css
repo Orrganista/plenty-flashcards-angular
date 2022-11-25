@@ -1,13 +1,14 @@
 .footer {
+  width: 100%;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 60px;
   box-sizing: border-box;
+  padding: 60px 0 40px 0;
 
-  width: 100%;
   background-color: #242b31;
 }
 
@@ -18,17 +19,21 @@
 }
 
 .footer__grid {
+  width: 100%;
   flex: 1 0 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  gap: 40px;
+  box-sizing: border-box;
+  padding: 0 50px;
+
   color: #fcede7;
 }
 
 .grid__item {
-  flex: 1 0 250px;
+  max-width: 270px;
 }
 
 .footer__header {
@@ -42,27 +47,25 @@
 }
 
 .footer__icons {
-  display: inline-block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  gap: 20px;
   list-style: none;
   padding: 0;
   line-height: 30px;
   font-size: 2rem;
 }
 
-.footer__icons > li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
 .footer__form {
   padding: 5px;
   border-radius: 50px;
   background-color: #fcede7;
-  width: 75%;
 }
 
 .footer__form > input {
   width: 75%;
+  box-sizing: border-box;
   padding: 10px;
   text-decoration: none;
   outline: none;
@@ -75,19 +78,72 @@
 
 .footer__form > button {
   width: 25%;
+  box-sizing: border-box;
   padding: 10px;
   text-decoration: none;
   outline: none;
-  border: none;
+  border: solid 2px #db6637;
   border-radius: 25px;
+
   font-weight: 700;
   font-size: 1rem;
   background-color: #db6637;
-  color: #242b31;
+  color: #fcede7;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+.footer__form > button:hover {
+  background-color: #fcede7;
+  color: #db6637;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+a,
+i {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fcede7;
+}
+
+a:hover,
+i:hover {
+  color: #db6637;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.footer__signature {
+  margin-top: 40px;
+  padding: 10px;
+  border: 2px solid #242b31;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #db6637;
+}
+
+.footer__signature:hover {
+  border: 2px solid #db6637;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 600px) {
   .footer__clue {
     font-size: 4vw;
+  }
+
+  .footer__grid,
+  .footer__icons {
+    text-align: center;
+    justify-content: center;
   }
 }

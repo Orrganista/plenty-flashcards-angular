@@ -1,0 +1,48 @@
+.construction {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+  box-sizing: border-box;
+  background-color: #fcede7;
+}
+
+.construction__content {
+  flex: 1 0 420px;
+  color: #242b31;
+}
+
+.construction__content > h1 {
+  font-size: 6rem;
+}
+
+.construction__content > h2 {
+  font-size: 3rem;
+}
+
+.construction__content > h3 {
+  font-size: 1rem;
+}
+
+.construction__button {
+  width: 100px;
+  padding: 16px;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #242b31;
+  background-color: #db6637;
+  cursor: pointer;
+}
+
+.construction__image {
+  flex: 1 0 400px;
+  text-align: center;
+}
+
+.construction__image > img {
+  width: 80%;
+}

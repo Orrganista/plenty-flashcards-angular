@@ -1,0 +1,151 @@
+.sign {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: #fcede7;
+}
+
+.sign__content {
+  position: relative;
+  width: 90%;
+  left: 5%;
+}
+
+.sign__state {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.sign__state > a {
+  color: #242b31;
+}
+
+.sign__form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 40px 30px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #242b31;
+  color: #db6637;
+}
+
+.sign__form > h1 {
+  font-size: 3rem;
+}
+
+.sign__form > form {
+  width: 80%;
+}
+
+.form__group {
+  text-align: start;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.form__group > input {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 0;
+  border: 0;
+  border-bottom: 2px solid #db6637;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  color: #fcede7;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.form__radio {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  text-align: start;
+  width: 40%;
+}
+
+.form__radio > label {
+  display: flex;
+  flex: 1 0 50%;
+}
+
+.form__radio > label > span {
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.radio__left {
+  border-left: 2px solid #db6637;
+  border-top: 2px solid #db6637;
+  border-bottom: 2px solid #db6637;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.radio__right {
+  border-right: 2px solid #db6637;
+  border-top: 2px solid #db6637;
+  border-bottom: 2px solid #db6637;
+  border-radius: 0px 25px 25px 0px;
+}
+
+.form__radio > label > input[type="radio"] {
+  display: none;
+}
+.form__radio > label > input[type="radio"]:checked + span {
+  background-color: #db6637;
+  color: #242b31;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.sign__form > form > button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  text-decoration: none;
+  outline: none;
+  border: solid 2px #db6637;
+  border-radius: 25px;
+  background-color: #242b31;
+  color: #db6637;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #fcede7a0;
+  font-weight: 400;
+}
+
+.is-invalid ~ .invalid-feedback {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.invalid-feedback {
+  display: none;
+}
+
+.invalid-feedback > span {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 900px) {
+  .sign__content {
+    width: 40%;
+    left: 30%;
+  }
+}

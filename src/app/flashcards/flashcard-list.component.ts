@@ -21,6 +21,7 @@ export class FlashcardListComponent implements OnInit, OnDestroy {
     this.sub = this.flashcardService.getBoxes().subscribe({
       next: (boxes) => (this.boxes = boxes),
       error: (err) => (this.errorMessage = err),
+      complete: () => console.log('All boxes received'),
     });
   }
 

@@ -8,7 +8,20 @@ import { Box } from './box';
 })
 export class FlashcardService {
   private flashcardsUrl = 'api/flashcards.json';
+
   constructor(private http: HttpClient) {}
+
+  // Brice Wilson
+
+  getAllBoxes(): Observable<Box[]> {
+    return this.http.get<Box[]>(this.flashcardsUrl);
+  }
+
+  // getBoxById(id: number): Box {
+  //   return this.http.get<Box>(`/api`);
+  // }
+
+  // Deborah Kurata
 
   getBoxes(): Observable<Box[]> {
     return this.http.get<Box[]>(this.flashcardsUrl).pipe(

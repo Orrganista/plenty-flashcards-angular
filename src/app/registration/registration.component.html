@@ -1,0 +1,113 @@
+<div class="sign">
+  <div class="sign__content">
+    <div class="sign__state">
+      <h3>Already have an account?</h3>
+      <a routerLink="/login">Sign In</a>
+    </div>
+
+    <div class="sign__form">
+      <h1>Create Account</h1>
+
+      <form novalidate (ngSubmit)="register()" [formGroup]="registrationForm">
+        <div class="form__group">
+          <input
+            id="nickname"
+            type="text"
+            placeholder="Nickname"
+            formControlName="nickname"
+            [ngClass]="{
+              'is-invalid':
+                (registrationForm.get('nickname')?.touched ||
+                  registrationForm.get('nickname')?.dirty) &&
+                !registrationForm.get('nickname')?.valid
+            }"
+            autocomplete="off"
+          />
+          <div class="invalid-feedback">
+            <span
+              *ngIf="registrationForm.get('nickname')?.errors?.['required']"
+            >
+              Nickname is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            email
+            [ngClass]="{
+              'is-invalid': emailMessage
+            }"
+            (click)="setMessage(registrationForm.get('email')!)"
+            autocomplete="off"
+          />
+          <div class="invalid-feedback">
+            <span>{{ emailMessage }}</span>
+          </div>
+        </div>
+
+        <div formGroupName="passwordGroup">
+          <div class="form__group">
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+              [ngClass]="{
+                'is-invalid':
+                  (registrationForm.get('passwordGroup.password')?.touched ||
+                    registrationForm.get('passwordGroup.password')?.dirty) &&
+                  !registrationForm.get('passwordGroup.password')?.valid
+              }"
+            />
+            <div class="invalid-feedback">
+              <span
+                *ngIf="registrationForm.get('passwordGroup.password')?.errors?.['required']"
+              >
+                Password is required
+              </span>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm Password"
+              formControlName="confirmPassword"
+              [ngClass]="{
+                'is-invalid':
+                  registrationForm.get('passwordGroup')?.errors ||
+                  ((registrationForm.get('passwordGroup.confirmPassword')
+                    ?.touched ||
+                    registrationForm.get('confirmPassword')?.dirty) &&
+                    !registrationForm.get('confirmPassword')?.valid)
+              }"
+            />
+            <div class="invalid-feedback">
+              <span *ngIf="registrationForm.get('passwordGroup')?.errors">
+                Passwords do not match
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          [title]="
+            registrationForm.valid
+              ? 'Save your entered data'
+              : 'Disabled until the form data is valid'
+          "
+          [disabled]="!registrationForm.valid"
+        >
+          CREATE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

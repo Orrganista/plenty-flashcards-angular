@@ -21,6 +21,7 @@
 
 .flashcard-list__box {
   width: 60vw;
+  max-height: 100%;
 }
 
 .flashcard-list__deck {
