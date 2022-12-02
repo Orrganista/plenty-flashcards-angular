@@ -1,0 +1,40 @@
+<div class="session">
+  <div class="session__content">
+    <div class="session__nav">
+      <h3>{{ session!.length | result : sessionSize }} / {{ sessionSize }}</h3>
+      <h4>
+        ({{
+          (session!.length | result : sessionSize) / sessionSize
+            | percent : "1.1-2"
+        }})
+      </h4>
+    </div>
+    <div class="session__card">
+      <div class="answer">
+        <h3 *ngIf="revealed">{{ currentFlashcard?.answer }}</h3>
+      </div>
+      <div class="question">
+        <h1>{{ currentFlashcard?.question }}</h1>
+      </div>
+    </div>
+    <div class="session__buttons">
+      <div
+        class="session__button incorrect"
+        *ngIf="revealed"
+        (click)="wasRight(false)"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div
+        class="session__button correct"
+        *ngIf="revealed"
+        (click)="wasRight(true)"
+      >
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="session__button reveal" *ngIf="!revealed" (click)="reveal()">
+        <i class="fa-regular fa-eye"></i>
+      </div>
+    </div>
+  </div>
+</div>

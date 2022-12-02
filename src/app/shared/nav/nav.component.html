@@ -1,0 +1,35 @@
+<header class="nav">
+  <div class="nav__left">
+    <ul class="nav__links">
+      <li *ngIf="nickname">
+        <i class="fa-solid fa-tree"></i>
+        <a>Hi, {{ nickname }}</a>
+      </li>
+      <li routerLink="/session">
+        <i class="fa-solid fa-seedling"></i>
+        <a>SESSION</a>
+      </li>
+      <li routerLink="/flashcards">
+        <i class="fa-solid fa-box-open"></i>
+        <a>FLASHCARDS</a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav__logo" routerLink="">
+    <p>Plenty</p>
+    <p>Flashcards</p>
+  </div>
+  <div class="nav__right">
+    <ul class="nav__links">
+      <li routerLink="/oops">
+        <i class="fa-solid fa-store"></i>
+        <a>MARKET</a>
+      </li>
+
+      <li routerLink="/login" (click)="logout()">
+        <i class="fa-solid fa-user"></i>
+        <a>{{ loginStatus }}</a>
+      </li>
+    </ul>
+  </div>
+</header>

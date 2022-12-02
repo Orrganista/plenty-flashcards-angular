@@ -1,0 +1,117 @@
+<div class="sign">
+  <div class="sign__content">
+    <div class="sign__state">
+      <h3>Don't have an account?</h3>
+      <a routerLink="/register">Sign Up</a>
+    </div>
+
+    <div class="sign__form">
+      <h1>Login</h1>
+
+      <form novalidate (ngSubmit)="tryLogin()" [formGroup]="loginForm">
+        <div class="form__group">
+          <div class="form__radio">
+            <label>
+              <input
+                type="radio"
+                value="nickname"
+                formControlName="loginMethod"
+              /><span class="radio__left">Nickname</span>
+            </label>
+            <label>
+              <input type="radio" value="email" formControlName="loginMethod" />
+              <span class="radio__right">Email</span>
+            </label>
+          </div>
+        </div>
+
+        <div
+          class="form__group"
+          *ngIf="loginForm.get('loginMethod')?.value === 'nickname'"
+        >
+          <input
+            id="nickname"
+            type="text"
+            placeholder="Nickname"
+            formControlName="nickname"
+            [ngClass]="{
+              'is-invalid':
+                (loginForm.get('nickname')?.touched ||
+                  loginForm.get('nickname')?.dirty) &&
+                !loginForm.get('nickname')?.valid
+            }"
+            autocomplete="off"
+          />
+          <div class="invalid-feedback">
+            <span *ngIf="loginForm.get('nickname')?.errors?.['required']">
+              Nickname is required
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="form__group"
+          *ngIf="loginForm.get('loginMethod')?.value === 'email'"
+        >
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            email
+            [ngClass]="{
+              'is-invalid':
+                (loginForm.get('email')?.touched ||
+                  loginForm.get('email')?.dirty) &&
+                !loginForm.get('email')?.valid
+            }"
+            autocomplete="off"
+          />
+          <div class="invalid-feedback">
+            <span *ngIf="loginForm.get('email')?.errors?.['required']">
+              Email is required
+            </span>
+            <span *ngIf="loginForm.get('email')?.errors?.['email']">
+              Email is invalid
+            </span>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            [ngClass]="{
+              'is-invalid':
+                (loginForm.get('password')?.touched ||
+                  loginForm.get('password')?.dirty) &&
+                !loginForm.get('password')?.valid
+            }"
+          />
+          <div class="invalid-feedback">
+            <span *ngIf="loginForm.get('password')?.errors?.['required']">
+              Password is required
+            </span>
+          </div>
+        </div>
+        <div>
+          <span>{{ errorMessage }}</span>
+        </div>
+
+        <button
+          type="submit"
+          [title]="
+            loginForm.valid
+              ? 'Save your entered data'
+              : 'Disabled until the form data is valid'
+          "
+          [disabled]="!loginForm.valid"
+        >
+          SIGN IN
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

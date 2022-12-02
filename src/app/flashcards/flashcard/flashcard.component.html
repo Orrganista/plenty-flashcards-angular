@@ -1,0 +1,10 @@
+<div class="list__row--flashcard">
+  <div class="row--flashcard" (click)="edit()">
+    <h3>{{ flashcard.question }}</h3>
+    <h4>{{ flashcard.answer }}</h4>
+  </div>
+
+  <div class="row__options--flashcard">
+    <i class="fa-solid fa-trash" (click)="remove()"></i>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+.session {
+  height: 75vh;
+  width: 100%;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgb(244, 156, 119);
+  background: radial-gradient(
+    circle,
+    rgba(244, 156, 119, 1) 20%,
+    rgba(219, 102, 55, 1) 67%
+  );
+}
+
+.session__content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.session__nav {
+  text-align: center;
+  flex: 0 1 10%;
+}
+
+.session__nav,
+.session__card,
+.session__buttons {
+  width: 75%;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.session__card {
+  flex: 0 1 50%;
+  border-radius: 25px;
+  padding: 20px;
+  color: #fcede7;
+  background-color: #242b31;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.answer {
+  flex: 0 1 20%;
+  display: flex;
+  align-items: center;
+}
+
+.question {
+  flex: 0 1 60%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer > h3 {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.session__buttons {
+  flex: 0 1 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 2.2rem;
+}
+
+.session__button {
+  flex: 0 1 50%;
+  text-align: center;
+  color: #fcede7;
+  background-color: #242b31;
+  cursor: pointer;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.session__button:hover {
+  color: #db6637;
+}
+
+.correct {
+  max-width: 150px;
+  border-radius: 0 10px 10px 0;
+}
+
+.incorrect {
+  max-width: 150px;
+  border-radius: 10px 0 0 10px;
+}
+
+.reveal {
+  max-width: 300px;
+  border-radius: 10px;
+}

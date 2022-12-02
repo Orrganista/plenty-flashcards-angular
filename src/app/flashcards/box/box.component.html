@@ -1,0 +1,55 @@
+<div class="list__row">
+  <div class="row--box" (click)="toggleBox()">
+    <input
+      id="box"
+      type="text"
+      class="row__input"
+      autocomplete="off"
+      [formControl]="editBox"
+      [ngClass]="{ 'row__input--enabled': !this.editBox.disabled }"
+    />
+  </div>
+  <div class="row__options--box">
+    <i class="fa-solid fa-pencil" (click)="this.editBox.enable()"></i>
+    <i class="fa-solid fa-trash" (click)="remove()"></i>
+  </div>
+  <div class="row__options--box" *ngIf="!this.editBox.disabled">
+    <i class="fa-solid fa-check" (click)="save()"></i>
+    <i class="fa-solid fa-minus" (click)="cancel()"></i>
+  </div>
+</div>
+
+<div *ngIf="showDecks" class="box__decks">
+  <fml-deck
+    *ngFor="let d of box.decks"
+    [deck]="d"
+    [box-id]="box._id!"
+    [ngClass]="'flashcard-list--deck'"
+    (removed)="removeDeck($event)"
+  ></fml-deck>
+
+  <div class="flashcard-list--deck">
+    <div class="list__row">
+      <div
+        class="row--deck"
+        (click)="[this.newDeck.setValue('New Deck'), this.newDeck.enable()]"
+      >
+        <input
+          class="row__input"
+          id="newDeck"
+          type="text"
+          value="+ Add Deck"
+          [formControl]="newDeck"
+          [ngClass]="{ 'row__input--enabled': !this.newDeck.disabled }"
+          autocomplete="off"
+        />
+      </div>
+      <div class="row__options--deck" *ngIf="!this.newDeck.disabled">
+        <i class="fa-solid fa-check" (click)="addDeck()"></i>
+        <i class="fa-solid fa-minus" (click)="cancel()"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="flashcard-list--deck"></div>
+</div>

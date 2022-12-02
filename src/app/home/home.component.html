@@ -1,6 +1,14 @@
-<div class="home">
-  <button class="home__button">START SESSION</button>
+<div
+  class="home"
+  [ngStyle]="{
+    backgroundImage:
+      'url(https://images.hdqwalls.com/wallpapers/lo-fi-cafe-4k-z8.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center'
+  }"
+>
+  <button class="home__button" routerLink="/choice">START SESSION</button>
 </div>
-
-<!-- [ngStyle]="{ backgroundImage: 'url(/assets/images/dach.jpeg)', backgroundSize:
+<!-- 
+[ngStyle]="{ backgroundImage: 'url(/assets/images/dach.jpeg)', backgroundSize:
 'cover', backgroundPosition: 'center center' }" -->

@@ -1,0 +1,195 @@
+.flashcard-list {
+  min-height: 90vh;
+  width: 100%;
+
+  background: rgb(244, 156, 119);
+  background: radial-gradient(
+    circle,
+    rgba(244, 156, 119, 1) 20%,
+    rgba(219, 102, 55, 1) 67%
+  );
+  /* background-color: #db6637; */
+}
+
+.flashcard-list__banner {
+  height: 5vh;
+  width: 100%;
+  background-color: #242b31;
+}
+
+.flashcard-list__content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  font-size: 0.8rem;
+}
+
+.list__row {
+  position: relative;
+  text-align: center;
+  border: solid 5px#242b31;
+  border-radius: 50px;
+  color: #fcede7;
+  background-color: #242b31;
+  cursor: pointer;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.list__row:hover {
+  color: #db6637;
+  background-color: #fcede7;
+}
+
+.list__row:hover > .row--box > .row__input {
+  color: #db6637;
+  border: 1px solid #fcede7;
+}
+
+.list__row:hover > .row--deck > .row__input {
+  color: #db6637;
+  border: 1px solid #fcede7;
+}
+
+.row__input {
+  box-sizing: border-box;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+  color: #fcede7;
+  background-color: transparent;
+
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #242b31;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.row--box > .row__input {
+  width: 75%;
+  font-size: 1.6rem;
+}
+
+.row--deck > .row__input {
+  width: 50%;
+  font-size: 1.3rem;
+}
+
+.row__input--enabled {
+  border: 1px solid #db6637;
+  background-color: #242b31;
+}
+
+.flashcard-list--box {
+  width: 60vw;
+  max-height: 100%;
+}
+
+.flashcard-list--deck {
+  flex: 1 0 300px;
+}
+
+.flashcard-list--flashcard {
+  flex: 1 0 auto;
+}
+
+.row--box {
+  padding: 15px;
+}
+
+.row--deck {
+  padding: 10px;
+}
+
+.row--flashcard {
+  padding: 8px;
+}
+
+.row--flashcard > h3,
+h4 {
+  font-weight: 300;
+  width: 80%;
+}
+
+.row__options--box,
+.row__options--deck,
+.row__options--flashcard {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  right: 4%;
+}
+
+.row__options--box {
+  top: 25%;
+  font-size: 1rem;
+}
+
+.row__options--deck,
+.row__options--flashcard {
+  top: 21%;
+  font-size: 0.8rem;
+}
+
+.row__options--box > i,
+.row__options--deck > i,
+.row__options--flashcard > i {
+  border-radius: 10px;
+  padding: 10px;
+  color: #fcede7;
+  background-color: #db6637;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.row__options--box > i:hover,
+.row__options--deck > i:hover,
+.row__options--flashcard > i:hover {
+  color: #242b31;
+}
+
+.box__decks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.deck__flashcards {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 5px;
+  padding: 20px;
+}
+
+.list__row--flashcard {
+  position: relative;
+  text-align: left;
+  border: solid 5px#242b31;
+  border-radius: 10px;
+  color: #fcede7;
+  background-color: #242b31;
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 900px) {
+  .flashcard-list--box {
+    width: 100%;
+  }
+}

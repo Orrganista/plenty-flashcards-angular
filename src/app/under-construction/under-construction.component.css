@@ -2,16 +2,16 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: center;
-
-  padding: 60px;
+  align-items: center;
+  gap: 50px;
+  padding: 30px;
   box-sizing: border-box;
   background-color: #fcede7;
 }
 
 .construction__content {
-  flex: 1 0 420px;
+  flex: 0 1 auto;
   color: #242b31;
 }
 
@@ -30,19 +30,16 @@
 .construction__button {
   width: 100px;
   padding: 16px;
-  margin-top: 20px;
-  border-radius: 50px;
-  font-weight: 700;
-  color: #242b31;
-  background-color: #db6637;
+  border-radius: 20px;
   cursor: pointer;
+  font-weight: 700;
+  color: #fcede7;
+  margin-top: 20px;
+  background-color: #db6637;
 }
 
-.construction__image {
-  flex: 1 0 400px;
-  text-align: center;
-}
-
-.construction__image > img {
-  width: 80%;
+.construction > img {
+  flex: 0 1 auto;
+  width: 40vw;
+  min-width: 380px;
 }

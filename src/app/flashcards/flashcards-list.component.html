@@ -1,0 +1,36 @@
+<div class="flashcard-list">
+  <div class="flashcard-list__content">
+    <fml-box
+      *ngFor="let b of boxes"
+      [box]="b"
+      [ngClass]="'flashcard-list--box'"
+      (removed)="removeBox($event)"
+      [routerLink]="['box', b._id]"
+    ></fml-box>
+
+    <div class="flashcard-list--box">
+      <div class="list__row">
+        <div class="row--box" (click)="addBox()">
+          <input
+            class="row__input"
+            id="newBox"
+            type="text"
+            value="+ Add Box"
+            [formControl]="newBox"
+            [ngClass]="{ 'row__input--enabled': !this.newBox.disabled }"
+            autocomplete="off"
+          />
+        </div>
+        <div class="row__options--box" *ngIf="!this.newBox.disabled">
+          <i class="fa-solid fa-check" (click)="save()"></i>
+          <i class="fa-solid fa-minus" (click)="cancel()"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<fml-add
+  *ngIf="this.dataService.flashcardManager.isActive"
+  [boxes]="this.boxes"
+></fml-add>

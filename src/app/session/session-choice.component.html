@@ -1,0 +1,48 @@
+<div class="choice">
+  <div class="choice__content">
+    <div class="choice__nav">
+      <div class="nav__left">
+        <ul class="nav__info">
+          <li>
+            <p>Box: {{ chosenBox?.name }}</p>
+          </li>
+          <li>
+            <p>Deck: {{ chosenDeck?.name }}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__start">
+        <p (click)="start()">START</p>
+      </div>
+      <div class="nav__right"></div>
+    </div>
+    <div class="choice__list">
+      <div class="list--box" *ngFor="let b of boxes">
+        <div
+          class="row--box"
+          fmlHighlightRow
+          [chosen]="b === chosenBox"
+          (click)="chooseBox(b)"
+        >
+          <h1>{{ b.name }}</h1>
+        </div>
+        <div class="box__decks" *ngIf="b === chosenBox">
+          <div class="list--deck" *ngFor="let d of b.decks | notEmptyDeck">
+            <div
+              class="row--deck"
+              fmlHighlightRow
+              [chosen]="d === chosenDeck"
+              (click)="chooseDeck(d)"
+            >
+              <h3>{{ d.name }}</h3>
+              <p>{{ d.flashcards.length }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list--box"></div>
+      <div class="list--box"></div>
+      <div class="list--box"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="list__row">
+  <div class="row--deck" (click)="toggleDeck()">
+    <input
+      id="deck"
+      type="text"
+      class="row__input"
+      autocomplete="off"
+      [formControl]="editDeck"
+      [ngClass]="{ 'row__input--enabled': !this.editDeck.disabled }"
+    />
+  </div>
+
+  <div class="row__options--deck">
+    <i class="fa-solid fa-pencil" (click)="this.editDeck.enable()"></i>
+    <i class="fa-solid fa-trash" (click)="remove()"></i>
+  </div>
+  <div class="row__options--deck" *ngIf="!this.editDeck.disabled">
+    <i class="fa-solid fa-check" (click)="save()"></i>
+    <i class="fa-solid fa-minus" (click)="cancel()"></i>
+  </div>
+</div>
+
+<div *ngIf="showFlashcards" class="deck__flashcards">
+  <div class="flashcard-list--flashcard">
+    <div class="list__row--flashcard" (click)="addFlashcard()">
+      <div class="row--flashcard">
+        <h2 style="text-align: center">+ Add Flashcard</h2>
+      </div>
+    </div>
+  </div>
+
+  <fml-flashcard
+    *ngFor="let f of deck.flashcards"
+    [flashcard]="f"
+    [box-id]="this.boxId"
+    [deck-id]="deck._id!"
+    [ngClass]="'flashcard-list--flashcard'"
+    (removed)="removeFlashcard($event)"
+  ></fml-flashcard>
+</div>
